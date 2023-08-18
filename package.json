@@ -4,10 +4,8 @@
   "description": "ioredis Redis Client Demo",
   "main": "index.js",
   "scripts": {
-    "basics": "node ioredis_basics.js",
-    "transformers": "node ioredis_transformers.js",
-    "streamingscan": "node ioredis_streaming_scan.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "basics": "node app.js",
+    "mongo": "node mongo.js"
   },
   "author": "Redis",
   "engines": {
@@ -15,6 +13,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "ioredis": "^4.17.1"
+    "express": "^4.18.1",
+    "ioredis": "^5.2.3",
+    "mongodb": "^4.10.0"
   }
 }
