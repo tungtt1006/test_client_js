@@ -17,4 +17,7 @@ COPY --chown=node:node . .
 
 RUN npm install
 
-CMD ["node", "mongo"]
+CMD ["npm", "run", "basics"]
+
+# docker build -f docker/Dockerfile -t test .
+# docker run -p 3000:3000 test
