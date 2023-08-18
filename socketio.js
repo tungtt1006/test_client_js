@@ -10,4 +10,8 @@ io.on("connection", (socket) => {
   // ...
 });
 
+app.get("/test", (req, res) => {
+    res.json({ msg: "welcom to the api" });
+});
+
 httpServer.listen(3000);
