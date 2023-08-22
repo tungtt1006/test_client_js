@@ -6,6 +6,7 @@ app.use(express.json());
 const server = app.listen(3000, () => {
     console.log("app listening on port 3000");
 });
+
 const io = new Server(server, {
     pingTimeout: 5000,
     cors: {
@@ -20,7 +21,7 @@ app.get("/test", (req, res) => {
 
 io.on("connection", (socket) => {
     socket.on("new message", (newMessageRecieved) => {
-        socket.emit("message recieved", newMessageRecieved);
+        socket.emit("message recieved", "server respond: " + newMessageRecieved);
 
         console.log("message recieved", newMessageRecieved);
     });

@@ -7,9 +7,10 @@ metadata:
 spec:
   containers:
   - name: test
-    image: tungtt1006/test:1.2.0
+    image: tungtt1006/test:1.2.3
     ports:
     - containerPort: 3000
+    resources: {}
 
 ---
 apiVersion: v1
